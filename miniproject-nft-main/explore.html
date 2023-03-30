@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>NFT Marketplace collection</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <!-- Google icon -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<body>
+   <!-- !background -->
+   <div class="background" id="background">
+      <div class="circle"></div>
+   </div>
+
+   <!-- !Popup Modal -->
+   <div class="modal-bg"></div>
+   <div class="modal">
+      <form class="form">
+         <div class="modal-close">
+            <i class="fa-solid fa-xmark"></i>
+         </div>
+         <span class="form-title">You really like the project</span>
+         <span class="sub mb">Register to get full access now :)</span>
+         <input id="file" type="file">
+         <input type="text" class="input" placeholder="username">
+         <input type="email" class="input" placeholder="email">
+         <input type="password" class="input" placeholder="password"> 
+         <span  span class="sub">Already have an account ? <a href="#">Sign in</a></span>
+         <button class="register-btn">Register</button>
+      </form>
+   </div>
+   <!-- !Profile modal -->
+   <div class="modal-bg"></div>
+   <div class="profile-modal">
+      <div class="p-modal">
+         <div class="profile-left">
+            <div class="feature-profile">
+               <img class="p-modal-img" src="./images/avt-20.jpg" alt="">
+            </div>
+            <div class="info-profile">
+               <p class="profile-title">Author Profile</p>
+               <h1>Samnang Ma</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore suscipit rerum similique maiores necessitatibus porro inventore magni culpa voluptatem?</p>
+            </div>
+         </div>
+         <div class="profile-right">
+            <button style="padding: 10px 20px; text-align: center; border: 2px solid #aaa; color: #fff; background: transparent; border-radius: 50px;">Follow</button>
+
+            <div class="social-icon">
+               <a href="#"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Header -->
+   <header>
+      <div class="navbar">
+         <div class="logo">
+            <a href="./index.html"><img src="./images/logo.png" alt=""></a>
+            <a href="./index.html"><h2>Ti Phsaear</h2></a>
+         </div>
+
+         <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="https://opensea.io/blog/categories/community">Community</a></li>
+            <li><a href="./about/about.html">About us</a></li>
+         </ul>
+
+         <div class="nav-right">
+            <div class="theme-mode">
+               <label class="switch">
+                  <input type="checkbox" id="mode">
+                  <span class="toggle-slide"></span>
+              </label>
+            </div>
+
+            <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+            <a href="./login.html"><i class="fa-solid fa-circle-user fa-3x"></i></a>
+            <a href="./cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            <button onclick="window.location.href = 'wallet connect/walletconnect.html';" class="btn"><i class="fa-solid fa-wallet"></i><span>Wallet connect</span></button>
+            
+            <div class="mobile-btn">
+               <div class="bar"></div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- Main-header -->
+   <div class="main-bg">
+      <div class="main-header">
+         <div class="header-content">
+            <h2>Discover, find, <span>Sell, Create </span> Your NFTs</h2>
+            <p>Discover, create and collect over 100 unique digital/physical assets. Our mission is protecting, preserving and promoting Cambodian Artist.</p>
+            <div class="cta">
+               <button class="btn header-btn"><i class="fa-solid fa-rocket"></i>Explore</button>
+               <button class="btn header-btn"><i class="fa-solid fa-plus"></i>Create</button>
+            </div>
+         </div>
+         <div class="header-image">
+            <img class="slider-img" src="./img/20.gif" alt="">
+            <!-- <img class="slider-img" src="./images/unnamed.gif" alt=""> -->
+           
+            
+         </div>
+
+         <div class="floating-bg" style="width: 100%; height: 60vh; position: absolute; top: 200px; z-index: -1; right: 0;">
+            <div class="floating square purple" style="top: 2rem; left: 2rem;"></div>
+            <div class="floating square pink" style="top: 4rem; right: 24rem;"></div>
+            <div class="floating square orange" style="top: 16rem; left: 32rem;"></div>
+            <div class="floating square purple" style="bottom: 4rem; right: 2rem;"></div>
+            <div class="floating square pink" style="top: 16rem; left: 8rem;"></div>
+            <div class="floating square pink" style="top: 4rem; right: 24rem;"></div>
+            <div class="floating circle purple" style="top: 12rem; right: 2rem;"></div>
+            <div class="floating circle orange" style="top: 8rem; right: 8rem;"></div>
+            <div class="floating circle purple" style="top: 8rem; right: 40rem;"></div>
+            <div class="floating circle orange" style="top: 4rem; left: 32rem;"></div>
+          </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <!-- <h2 class="title" style="display: flex; justify-content: space-between; align-items: center;">Today's Picks
+        
+      </h2> -->
+
+      <section class="section-3">
+         <div class="menu-bar">
+            <div class="soft">
+               <button class="outline-btn">
+                  <span class="material-symbols-outlined">grid_view</span>Category
+               </button>
+               <button class="outline-btn">
+                  <span class="material-symbols-outlined">
+                     attach_money
+                  </span>Price range
+               </button>
+               <button class="outline-btn">
+                  <span class="material-symbols-outlined">
+                     bolt
+                  </span>Sale type
+               </button>
+               <button class="outline-btn">
+                  <span class="material-symbols-outlined">
+                     deployed_code
+                  </span>Blockchain
+               </button>
+               <button class="outline-btn">
+                  <span class="material-symbols-outlined">
+                     sort
+                  </span>Sort By: Recently Added
+               </button>
+            </div>
+         </div>
+      </section>
+
+      <!-- Hero 3 -->
+      <div class="card-container">
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/1-mk.jpg" alt="">
+               <div class="heart-icon">
+                  <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>Mutant Ape Yacht Club</h3>
+                  <div class="tag">BSC</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/8-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Samnang Ma</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/1-pg.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>Pudgy Penguins</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/7-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Piseth Sek</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/1-dd.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>Doodles</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/6-im.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Sak Visal</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/12.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>Doodles 2</h3>
+                  <div class="tag">BSC</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/5-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Sak Visal</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/13.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>Bored Ape</h3>
+                  <div class="tag">BSC</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/3-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Piseth Sek</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/1-k1.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>MUSK BOY DOLL</h3>
+                  <div class="tag">BSC</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/1-img.png" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Samang Ma</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/1-yk.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>YEAK</h3>
+                  <div class="tag">BSC</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/4-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Sreynoch Sothun</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/1.ch.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>CHHMAPIXELS</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/9-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>SengLeap Seang</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./images/card-1.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>CHHMAPIXELS</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/9-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>SengLeap Seang</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./images/card-8.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>CHHMAPIXELS</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/5-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Sreynoch</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/nk.webp " alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>CHHMAPIXELS</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/10-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Visal Sak</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./images/card-14.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>Bape 01</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/3-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Samnang Ma</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./images/card-12.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>Bape 02</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/8-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Samnang Ma</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/14.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>Mutant Ape</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/7-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Visal Sak</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./images/card-19.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>Doodles 02</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/11-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Sreynoch </h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-image" onclick="window.location='./detials/details.html'">
+               <img src="./img/15.jpg" alt="">
+               <div class="heart-icon">
+                        <i class="fa-regular fa-heart"></i>
+                  100
+               </div>
+            </div>
+            <div class="card-info">
+               <div class="card-name">
+                  <h3>CHHMAPIXELS</h3>
+                  <div class="tag">ETH</div>
+               </div>
+            </div>
+            <div class="card-profile">
+               <div class="profile">
+                  <div class="p-image">
+                     <img src="./img/12-img.jpg" alt="">
+                  </div>
+                  <div class="p-name">
+                     <p>Creator</p>
+                     <h4>Piseth</h4>
+                  </div>
+               </div>
+               <div class="price">
+                  <p class="p">Current Bid</p>
+                  <h3>4.89 ETH</h3>
+               </div>
+            </div>
+            <div class="card-bottom">
+               <button class="btn card-btn">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  Place Bid
+               </button>
+               <a href="#" class="history-reload"><i class="fa-solid fa-rotate-right"></i>View History</a>
+            </div>
+         </div>
+      </div>
+      </div>
+
+ 
+   <!-- Footer -->
+   <footer class="footer-container">
+      <div class="footer-wrapper">
+         <div class="footer-box footer-logo">
+            <div class="logo">
+               <img src="./images/logo.png" alt="">
+               <h2>Ti Phsaear</h2>
+            </div>
+            <p>Discover, create and collect over 100 unique digital/physical assets. Our mission is protecting, preserving and promoting Cambodian Artist.</p>
+         </div>
+         <ul class="footer-box">
+            <h2>My Account</h2>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Author Profile</a></li>
+            <li><a href="#">Create Item</a></li>
+         </ul>
+         <ul class="footer-box">
+            <h2>Resources</h2>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Author Profile</a></li>
+            <li><a href="#">Create Item</a></li>
+         </ul>
+         <ul class="footer-box">
+            <h2>Company</h2>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Author Profile</a></li>
+            <li><a href="#">Create Item</a></li>
+         </ul>
+         <div class="footer-box">
+            <h2>Subcribe Us</h2>
+            <div class="input-box">
+               <input type="email" placeholder="masamnang7@gmail.com">
+               <!-- <div class="send-icon">
+                  <i class="fa-solid fa-arrow-right"></i>
+               </div> -->
+               <button>
+                  <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                      <svg height="28" width="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+               </button>
+            </div>
+            <div class="social-media">
+               <a target="#" href="#"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+               <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+               <a href="#"><i class="fa-brands fa-discord"></i></a>
+               <a href="#"><i class="fa-brands fa-youtube"></i></a>
+               <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <script src="main.js"></script>
+</body>
+</html>

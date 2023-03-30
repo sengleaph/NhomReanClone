@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>NFT Marketplace collection</title>
+   <link rel="stylesheet" href="about.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <!-- Google icon -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;300;400;500;600;700&family=Noto+Serif+Khmer:wght@500;700;800;900&display=swap" rel="stylesheet">
+   <!-- !background -->
+   <div class="background" id="background">
+      <div class="circle"></div>
+   </div>
+
+   <!-- !Popup Modal -->
+   <div class="modal-bg"></div>
+   <div class="modal">
+      <form class="form">
+         <div class="modal-close">
+            <i class="fa-solid fa-xmark"></i>
+         </div>
+         <span class="form-title">You really like the project</span>
+         <span class="sub mb">Register to get full access now </span>
+         <input id="file" type="file">
+         <input type="text" class="input" placeholder="username">
+         <input type="email" class="input" placeholder="email">
+         <input type="password" class="input" placeholder="password"> 
+         <span  span class="sub">Already have an account ? <a href="./login.html">Sign in</a></span>
+         <button class="register-btn">Register</button>
+      </form>
+   </div>
+   <!-- !Profile modal -->
+   <div class="modal-bg"></div>
+   <div class="profile-modal">
+      <div class="p-modal">
+         <div class="profile-left">
+            <div class="feature-profile">
+               
+               <img class="p-modal-img" src="./images/avt-20.jpg" alt="avatar">
+            </div>
+            <div class="info-profile">
+               <p class="profile-title">Author Profile</p>
+               <h1>Visal sak</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore suscipit rerum similique maiores necessitatibus porro inventore magni culpa voluptatem?</p>
+            </div>
+         </div>
+         <div class="profile-right">
+            <button style="padding: 10px 20px; text-align: center; border: 2px solid #aaa; color: #fff; background: transparent; border-radius: 50px;">Follow</button>
+
+            <div class="social-icon">
+               <a href="#"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Header -->
+   <header>
+      <div class="navbar">
+         <div class="logo">
+            <img src="../images/logo.png" alt="">
+            <h2>Ti Phsaear</h2>
+         </div>
+
+         <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../explore.html">Explore</a></li>
+            <li><a href="https://opensea.io/blog/categories/community">Community</a></li>
+            <li><a href="about.html">About us</a></li>
+         </ul>
+
+         <div class="nav-right">
+            <div class="theme-mode">
+               <label class="switch">
+                  <input type="checkbox" id="mode">
+                  <span class="toggle-slide"></span>
+              </label>
+            </div>
+            <a href="../login.html"><i class="fa-solid fa-circle-user fa-3x"></i></a>
+            <!-- <i class="fa-solid fa-circle-user fa-3x"><a href="./login.html"></a></i> -->
+            <button onclick="window.location.href = 'wallet connect/walletconnect.html';" class="btn"><i class="fa-solid fa-wallet"></i><span>Wallet connect</span></button>
+            
+            <div class="mobile-btn">
+               <div class="bar"></div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- Main-header -->
+   <div class="main-bg">
+      <div class="main-header">
+        <div class="header-content">
+            <h2>Ti Phsaear is <span>NFT </span> Marketplace. </h2>
+            <p>An NFT marketplace is a digital platform for buying and selling NFTs. These platforms allow people to store and display their NFTs plus sell them to others for cryptocurrency or money. Some NFT marketplaces also allow users to mint their NFTs on the platform itself .</p>
+            <!-- <div class="cta">
+               <a href="./explore.html"><button class="btn header-btn"><i class="fa-solid fa-rocket"></i>Explore Now</button></a>
+               <button class="btn header-btn"><i class="fa-solid fa-plus"></i>Create</button>
+            </div> -->
+            <h2>What's <span>NFT </span> ?</h2>
+            <p>An NFT is a digital asset that can come in the form of art, music, in-game items, videos, and more. They are bought and sold online, frequently with cryptocurrency, and they are generally encoded with the same underlying software as many cryptos.</p>
+  
+         </div>
+         <div class="header-image">
+             <img class="slider-img" src="../images/logo.png" alt="khmer art">  
+             <!-- <img class="slider-img" src="./images/photo_2023-03-30_15-28-33.jpg" alt="khmer art">   -->
+         </div>
+
+      </div>
+   </div>
+   <!-- Footer -->
+   <footer class="footer-container">
+      <div class="footer-wrapper">
+         <div class="footer-box footer-logo">
+            <div class="logo" >
+               <a href="./index.html"><img src="./images/logo.png" alt=""></a>
+               <a href="./index.html"><h2>Ti Phsaear</h2></a>
+            </div>
+            <p>Discover, create and collect over 100 unique digital/physical assets. Our mission is protecting, preserving and promoting Cambodian Artist.</p>
+         </div>
+         <ul class="footer-box">
+            <h2>My Account</h2>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Author Profile</a></li>
+            <li><a href="#">Create Item</a></li>
+         </ul>
+         <ul class="footer-box">
+            <h2>Resources</h2>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Author Profile</a></li>
+            <li><a href="#">Create Item</a></li>
+         </ul>
+         <ul class="footer-box">
+            <h2>Company</h2>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Author Profile</a></li>
+            <li><a href="#">Create Item</a></li>
+         </ul>
+         <div class="footer-box">
+            <h2>Subcribe Us</h2>
+            <div class="input-box">
+               <input type="email" placeholder="Data@gmail.com">
+               <!-- <div class="send-icon">
+                  <i class="fa-solid fa-arrow-right"></i>
+               </div> -->
+               <button>
+                  <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                      <svg height="28" width="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+               </button>
+            </div>
+            <div class="social-media">
+               <a target="#" href="#"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+               <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+               <a href="#"><i class="fa-brands fa-discord"></i></a>
+               <a href="#"><i class="fa-brands fa-youtube"></i></a>
+               <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+   <script src="../main.js"></script>
+</body>
+</html>
